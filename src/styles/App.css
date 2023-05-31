@@ -10,14 +10,34 @@
 }
 
 .App {
+    font-family: "Roboto Thin", sans-serif;
     width: 800px;
+    padding: 0 20px;
 }
 
 .post {
     display: flex;
     padding: 15px;
-    border: 2px solid teal;
+    border: 2px solid #2f889a;
+    border-radius: 5px;
     margin-top: 15px;
     justify-content: space-between;
     align-items: center;
+}
+
+.post-enter {
+    transform: translateX(-150px);
+}
+
+.post-enter-active {
+    opacity: 0;
+    transform: translateX(0);
+    transition: all 500ms ease-in;
+}
+.post-exit {
+    opacity: 1;
+}
+.post-exit-active {
+    transform: translateX(-150px);
+    transition: all 500ms ease-in;
 }
